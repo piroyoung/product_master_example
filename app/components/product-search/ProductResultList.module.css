@@ -1,0 +1,72 @@
+.root {
+  display: grid;
+  gap: 16px;
+}
+
+.status {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-height: 260px;
+}
+
+.cardHeader {
+  display: grid;
+  gap: 4px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.code {
+  color: #616161;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.description {
+  color: #424242;
+  line-height: 1.6;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.empty {
+  padding: 32px;
+  text-align: center;
+  border: 1px dashed #c7c7c7;
+  border-radius: 12px;
+  background: #ffffff;
+}

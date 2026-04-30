@@ -1,0 +1,8 @@
+.azure
+.git
+.react-router
+build
+node_modules
+npm-debug.log
+.env
+.env.*

@@ -1,0 +1,45 @@
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #115ea3;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 760px;
+  color: #424242;
+  line-height: 1.7;
+}
+
+.panel {
+  display: grid;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 8%);
+}
+
+.error {
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 28px 16px 48px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}

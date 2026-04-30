@@ -1,0 +1,8 @@
+.root {
+  display: grid;
+  gap: 8px;
+}
+
+.input {
+  max-width: 720px;
+}

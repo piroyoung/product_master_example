@@ -1,0 +1,12 @@
+name: product-master-search-demo
+metadata:
+  template: product-master-search-demo@0.0.1
+
+services:
+  web:
+    project: .
+    host: containerapp
+    image: productsearchweb
+    docker:
+      path: ./Dockerfile
+      context: .

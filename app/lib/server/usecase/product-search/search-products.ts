@@ -64,10 +64,10 @@ export async function searchProducts(
 
 function normalizeTop(top: number | undefined): number {
   if (top === undefined || Number.isNaN(top)) {
-    return 8;
+    return 100;
   }
 
-  return Math.min(Math.max(Math.trunc(top), 1), 20);
+  return Math.min(Math.max(Math.trunc(top), 1), 100);
 }
 
 function toDto(hit: ProductSearchHit): ProductSearchItemDto {

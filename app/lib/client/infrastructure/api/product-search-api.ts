@@ -26,7 +26,7 @@ export async function fetchProductSearch(
 ): Promise<ProductSearchResponseDto> {
   const params = new URLSearchParams({
     q: query,
-    top: "8",
+    top: "100",
   });
   const response = await fetch(`/api/products/search?${params.toString()}`, {
     signal,

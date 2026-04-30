@@ -10,51 +10,41 @@
   gap: 12px;
 }
 
-.list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #ffffff;
 }
 
-.card {
-  min-height: 260px;
+.table {
+  min-width: 1120px;
 }
 
-.cardHeader {
-  display: grid;
-  gap: 4px;
+.codeColumn {
+  width: 132px;
 }
 
-.titleRow {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
+.productColumn {
+  width: 260px;
+}
+
+.tagsColumn {
+  width: 220px;
 }
 
 .code {
-  color: #616161;
+  color: #424242;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0;
+.productName {
+  display: grid;
+  gap: 2px;
 }
 
-.description {
-  color: #424242;
-  line-height: 1.6;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: center;
-  margin-top: 16px;
+.kana {
+  color: #616161;
 }
 
 .tags {

@@ -7,7 +7,20 @@ type EnsureProductSearchIndexDependencies = {
   searchGateway: ProductSearchGateway;
 };
 
+let indexSyncPromise: Promise<number> | undefined;
+
 export async function ensureProductSearchIndex(
+  dependencies: EnsureProductSearchIndexDependencies,
+): Promise<number> {
+  indexSyncPromise ??= syncProductSearchIndex(dependencies).catch((error: unknown) => {
+    indexSyncPromise = undefined;
+    throw error;
+  });
+
+  return indexSyncPromise;
+}
+
+async function syncProductSearchIndex(
   dependencies: EnsureProductSearchIndexDependencies,
 ): Promise<number> {
   const products = await dependencies.productRepository.listProducts();

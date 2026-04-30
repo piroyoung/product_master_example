@@ -55,6 +55,7 @@ const selectFields = [
   "description",
   "updatedAt",
 ] as const;
+const maxIndexingBatchSize = 1000;
 
 export class AzureSearchProductGateway implements ProductSearchGateway {
   private readonly indexClient: SearchIndexClient;
@@ -83,13 +84,16 @@ export class AzureSearchProductGateway implements ProductSearchGateway {
       return;
     }
 
-    const result = await this.searchClient.mergeOrUploadDocuments(
-      products.map(toSearchDocument),
-    );
-    const failed = result.results.filter((item) => !item.succeeded);
+    for (let start = 0; start < products.length; start += maxIndexingBatchSize) {
+      const batch = products.slice(start, start + maxIndexingBatchSize);
+      const result = await this.searchClient.mergeOrUploadDocuments(
+        batch.map(toSearchDocument),
+      );
+      const failed = result.results.filter((item) => !item.succeeded);
 
-    if (failed.length > 0) {
-      throw new Error(`Azure AI Search indexing failed for ${failed.length} product documents.`);
+      if (failed.length > 0) {
+        throw new Error(`Azure AI Search indexing failed for ${failed.length} product documents.`);
+      }
     }
   }
 

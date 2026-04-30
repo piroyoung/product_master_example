@@ -1,13 +1,13 @@
 # Product Master Search Demo
 
-Azure AI Search を使った食品の商品マスタ検索デモです。React Router のサーバールートから Azure AI Search を呼び出し、Fluent UI と CSS Modules で構成した UI でインクリメンタル検索を行います。
+Azure AI Search を使った食品の商品マスタ検索デモです。React Router のサーバールートから Azure AI Search を呼び出し、Fluent UI と CSS Modules で構成した UI で約 5,000 件の商品マスタをインクリメンタル検索します。
 
 ## Architecture
 
 - React Router framework mode
 - Fluent UI React v9
 - CSS Modules
-- Static TypeScript product master for demo data
+- Static TypeScript product master generator for about 5,000 demo products
 - Azure AI Search for search indexing and query execution
 - Azure Container Registry and Azure Container Apps for hosting
 - Managed identity from Container Apps to Azure AI Search

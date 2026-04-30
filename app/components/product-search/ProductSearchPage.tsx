@@ -21,7 +21,7 @@ export function ProductSearchPage() {
         <Text className={styles.eyebrow}>Azure AI Search demo</Text>
         <Title1>食品の商品マスタをインクリメンタル検索</Title1>
         <Text size={500} className={styles.description}>
-          デモ用の静的な食品商品マスタを Azure AI Search に同期し、入力に合わせて商品名・カナ・ブランド・カテゴリ・タグ・商品コードを横断検索します。
+          デモ用の約 5,000 件の食品商品マスタを Azure AI Search に同期し、入力に合わせて商品名・カナ・ブランド・カテゴリ・タグ・商品コードを横断検索します。
         </Text>
       </section>
 

@@ -6,7 +6,8 @@ import { searchProductsWithDefaultDependencies } from "~/lib/server/infrastructu
 export async function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
   const query = url.searchParams.get("q") ?? "";
-  const top = Number(url.searchParams.get("top") ?? "8");
+  const topParameter = url.searchParams.get("top");
+  const top = topParameter === null ? undefined : Number(topParameter);
 
   try {
     const result = await searchProductsWithDefaultDependencies({ query, top });
